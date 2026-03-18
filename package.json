@@ -1,0 +1,14 @@
+{
+  "name": "roto-subagent-band",
+  "version": "0.1.0",
+  "description": "Multi-agent code review plugin for Claude Code",
+  "author": "roto",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "code-review",
+    "multi-agent",
+    "subagent"
+  ]
+}
