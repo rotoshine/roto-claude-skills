@@ -6,6 +6,6 @@
     "name": "roto"
   },
   "license": "MIT",
-  "skills": "skills",
-  "agents": "agents"
+  "skills": "./skills/",
+  "agents": "./agents/"
 }
