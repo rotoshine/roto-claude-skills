@@ -2,7 +2,7 @@
 
 개인 커스텀 스킬 모음 for Claude Code — 멀티 에이전트 코드 리뷰, 구현 계획, 스토리북 스크린샷 등.
 
-## 포함 스킬 (17개)
+## 포함 스킬 (22개)
 
 ### 코드 리뷰 계열
 
@@ -43,6 +43,21 @@
 | `/roto-wt-create` | origin/main 기준으로 새 git worktree 생성 (worktrunk CLI) |
 | `/roto-wt-switch` | worktree 목록 표시 및 전환 |
 | `/roto-wt-clean` | worktree 삭제 및 브랜치 정리 |
+
+### PR / 릴리즈
+
+| 스킬 | 설명 |
+|------|------|
+| `/roto-pr-description` | 커밋 + diff 분석 → PR title/body 자동 생성/업데이트 |
+| `/roto-release-notes` | 마지막 태그 이후 머지 PR 수집 → 릴리즈 노트 자동 생성 |
+
+### 코드 품질
+
+| 스킬 | 설명 |
+|------|------|
+| `/roto-dead-code` | 미사용 export, 미참조 파일, 순환 의존성 탐지 |
+| `/roto-dep-audit` | outdated/vulnerable/deprecated 의존성 탐지 + 업그레이드 제안 |
+| `/roto-a11y-audit` | WCAG 2.1 AA 기준 접근성 이슈 자동 검출 |
 
 ### 사고 도구
 
@@ -127,6 +142,20 @@
 /roto-wt-create fix/search-console                   # 새 worktree 생성
 /roto-wt-switch                                      # worktree 목록 + 전환
 /roto-wt-clean                                       # 현재 worktree 삭제
+
+# PR / 릴리즈
+/roto-pr-description                  # PR 자동 생성
+/roto-pr-description --update         # 기존 PR body 업데이트
+/roto-release-notes                   # 릴리즈 노트 생성
+/roto-release-notes --since v1.2.0    # 특정 태그 이후
+
+# 코드 품질
+/roto-dead-code                       # dead code 탐지
+/roto-dead-code --circular            # 순환 의존성만
+/roto-dep-audit                       # 의존성 감사
+/roto-dep-audit --security            # 보안 취약점만
+/roto-a11y-audit                      # 접근성 감사
+/roto-a11y-audit --pr                 # PR 변경 파일만
 
 # 사고 도구
 /roto-ultra-think 마이크로서비스 마이그레이션 vs 모놀리스 개선?
