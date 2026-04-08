@@ -1,0 +1,12 @@
+{
+  "name": "@roto-claude-skills/ux-explorer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "explore": "tsx explore.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "tsx": "^4.21.0"
+  }
+}

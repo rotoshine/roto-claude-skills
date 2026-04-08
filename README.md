@@ -2,7 +2,7 @@
 
 개인 커스텀 스킬 모음 for Claude Code — 멀티 에이전트 코드 리뷰, 구현 계획, 스토리북 스크린샷 등.
 
-## 포함 스킬 (22개)
+## 포함 스킬 (23개)
 
 ### 코드 리뷰 계열
 
@@ -65,6 +65,12 @@
 |------|------|
 | `/roto-ultra-think` | 다차원 분석과 깊은 문제 해결을 위한 구조화된 사고 프레임워크 |
 
+### UX 탐색
+
+| 스킬 | 설명 |
+|------|------|
+| `/roto-ux-explore` | 페르소나 기반 Playwright UX 탐색 테스트 — AI가 사용자 관점으로 사이트 탐색 후 개선점 리포트 |
+
 ### 유틸리티
 
 | 스킬 | 설명 |
@@ -100,11 +106,38 @@
 ```bash
 # 1. 마켓플레이스 추가
 /plugin marketplace add rotoshine/roto-claude-skills
+```
 
-# 2. 플러그인 설치
-/plugin install roto-claude-skills@rotoshine-roto-claude-skills
+### 전체 설치
 
-# 3. 플러그인 리로드
+```bash
+/plugin install roto-code-review@rotoshine-roto-claude-skills
+/plugin install roto-planning@rotoshine-roto-claude-skills
+/plugin install roto-storybook@rotoshine-roto-claude-skills
+/plugin install roto-pr-release@rotoshine-roto-claude-skills
+/plugin install roto-code-quality@rotoshine-roto-claude-skills
+/plugin install roto-worktree@rotoshine-roto-claude-skills
+/plugin install roto-ux-explore@rotoshine-roto-claude-skills
+/reload-plugins
+```
+
+### 개별 설치
+
+필요한 플러그인만 골라서 설치할 수 있습니다.
+
+| 플러그인 | 설명 | 스킬 수 |
+|---------|------|--------|
+| `roto-code-review` | 멀티 에이전트 코드 리뷰 + 테스트 생성 | 7 |
+| `roto-planning` | 멀티 에이전트 구현 계획 | 4 |
+| `roto-storybook` | 스토리북 스크린샷 + 패치노트 | 2 |
+| `roto-pr-release` | PR 자동 생성 + 릴리즈 노트 | 2 |
+| `roto-code-quality` | Dead code, 의존성, 접근성 감사 | 4 |
+| `roto-worktree` | Git worktree 관리 | 3 |
+| `roto-ux-explore` | 페르소나 기반 UX 탐색 (Playwright) | 1 |
+
+```bash
+# 예: 코드 리뷰만 설치
+/plugin install roto-code-review@rotoshine-roto-claude-skills
 /reload-plugins
 ```
 
@@ -164,6 +197,11 @@
 /roto-dep-audit --security            # 보안 취약점만
 /roto-a11y-audit                      # 접근성 감사
 /roto-a11y-audit --pr                 # PR 변경 파일만
+
+# UX 탐색
+/roto-ux-explore 신규사용자 http://localhost:3000
+/roto-ux-explore 외국인 https://example.com --repeat=3
+/roto-ux-explore "처음 방문한 40대 주부" https://shop.example.com "회원가입 완료하기"
 
 # 사고 도구
 /roto-ultra-think 마이크로서비스 마이그레이션 vs 모놀리스 개선?

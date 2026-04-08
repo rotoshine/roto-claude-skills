@@ -1,0 +1,9 @@
+{
+  "name": "roto-worktree",
+  "version": "1.1.0",
+  "description": "Git worktree 생성, 전환, 정리 유틸리티",
+  "author": {
+    "name": "roto"
+  },
+  "license": "MIT"
+}

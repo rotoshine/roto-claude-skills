@@ -1,0 +1,9 @@
+{
+  "name": "roto-code-review",
+  "version": "1.1.0",
+  "description": "멀티 에이전트 코드 리뷰, 테스트 생성 스킬 (7개 에이전트 병렬 리뷰)",
+  "author": {
+    "name": "roto"
+  },
+  "license": "MIT"
+}

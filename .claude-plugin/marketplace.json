@@ -8,17 +8,95 @@
   },
   "plugins": [
     {
-      "name": "roto-claude-skills",
-      "source": "./",
-      "description": "멀티 에이전트 코드 리뷰, 구현 계획, 스토리북 스크린샷 등 개인 커스텀 스킬 모음",
-      "version": "1.0.0",
+      "name": "roto-code-review",
+      "source": "./plugins/roto-code-review",
+      "description": "멀티 에이전트 코드 리뷰, 테스트 생성 스킬 (7개 에이전트 병렬 리뷰)",
+      "version": "1.1.0",
       "author": {
         "name": "roto"
       },
       "homepage": "https://github.com/rotoshine/roto-claude-skills",
       "repository": "https://github.com/rotoshine/roto-claude-skills",
       "license": "MIT",
-      "keywords": ["code-review", "planning", "multi-agent", "subagent", "reinforce", "storybook", "screenshot"]
+      "keywords": ["code-review", "multi-agent", "subagent", "test-gen"]
+    },
+    {
+      "name": "roto-planning",
+      "source": "./plugins/roto-planning",
+      "description": "멀티 에이전트 구현 계획 수립, 검토, 강화, 실행 스킬 (5개 에이전트)",
+      "version": "1.1.0",
+      "author": {
+        "name": "roto"
+      },
+      "homepage": "https://github.com/rotoshine/roto-claude-skills",
+      "repository": "https://github.com/rotoshine/roto-claude-skills",
+      "license": "MIT",
+      "keywords": ["planning", "multi-agent", "subagent"]
+    },
+    {
+      "name": "roto-storybook",
+      "source": "./plugins/roto-storybook",
+      "description": "스토리북 스크린샷 캡처 및 UI 변경 패치노트 생성",
+      "version": "1.1.0",
+      "author": {
+        "name": "roto"
+      },
+      "homepage": "https://github.com/rotoshine/roto-claude-skills",
+      "repository": "https://github.com/rotoshine/roto-claude-skills",
+      "license": "MIT",
+      "keywords": ["storybook", "screenshot"]
+    },
+    {
+      "name": "roto-pr-release",
+      "source": "./plugins/roto-pr-release",
+      "description": "PR 자동 생성 및 릴리즈 노트 생성",
+      "version": "1.1.0",
+      "author": {
+        "name": "roto"
+      },
+      "homepage": "https://github.com/rotoshine/roto-claude-skills",
+      "repository": "https://github.com/rotoshine/roto-claude-skills",
+      "license": "MIT",
+      "keywords": ["pr", "release-notes"]
+    },
+    {
+      "name": "roto-code-quality",
+      "source": "./plugins/roto-code-quality",
+      "description": "Dead code 탐지, 의존성 감사, 접근성 감사, 구조화된 사고 프레임워크",
+      "version": "1.1.0",
+      "author": {
+        "name": "roto"
+      },
+      "homepage": "https://github.com/rotoshine/roto-claude-skills",
+      "repository": "https://github.com/rotoshine/roto-claude-skills",
+      "license": "MIT",
+      "keywords": ["dead-code", "dependency-audit", "accessibility"]
+    },
+    {
+      "name": "roto-worktree",
+      "source": "./plugins/roto-worktree",
+      "description": "Git worktree 생성, 전환, 정리 유틸리티",
+      "version": "1.1.0",
+      "author": {
+        "name": "roto"
+      },
+      "homepage": "https://github.com/rotoshine/roto-claude-skills",
+      "repository": "https://github.com/rotoshine/roto-claude-skills",
+      "license": "MIT",
+      "keywords": ["git", "worktree"]
+    },
+    {
+      "name": "roto-ux-explore",
+      "source": "./plugins/roto-ux-explore",
+      "description": "페르소나 기반 UX 탐색 테스트 — Playwright 브라우저로 AI가 사용자 관점에서 사이트를 탐색",
+      "version": "1.1.0",
+      "author": {
+        "name": "roto"
+      },
+      "homepage": "https://github.com/rotoshine/roto-claude-skills",
+      "repository": "https://github.com/rotoshine/roto-claude-skills",
+      "license": "MIT",
+      "keywords": ["ux", "playwright", "persona", "exploration"]
     }
   ]
 }

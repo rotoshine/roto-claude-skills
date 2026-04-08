@@ -254,7 +254,8 @@ git diff <BASE_BRANCH>...HEAD
 
 1. **Diff 수집**: `git diff <BASE_BRANCH>...HEAD` (로컬 변경 포함)
 2. **파일 필터링**: 자동 제외 패턴 적용 (`*.lock`, `*.min.*`, `*.map`, `*.generated.*`, `dist/`, `build/`, `.next/`, `*.snap`, `*.svg`)
-3. **7개 서브 에이전트 병렬 실행**: Agent 도구로 동시 spawn
+3. **프로젝트 컨텍스트 수집**: `/roto-band-code-review`의 Step 3.5와 동일 (루트 CLAUDE.md + 변경 파일 상위 CLAUDE.md + 관련 규칙 파일, 3,000줄 이하 제한)
+4. **7개 서브 에이전트 병렬 실행**: Agent 도구로 동시 spawn. 각 에이전트에게 프로젝트 컨텍스트를 `## 프로젝트 컨텍스트` 헤더로 포함하고, "위 프로젝트 컨텍스트를 반드시 참고하여 리뷰하세요." 지침 추가
 
    | 에이전트 | 파일 | model |
    |----------|------|-------|
@@ -266,7 +267,7 @@ git diff <BASE_BRANCH>...HEAD
    | i18n Reviewer | `agents/i18n-reviewer.md` | sonnet |
    | Claude Config | `agents/claude-config-reviewer.md` | sonnet |
 
-4. **결과 통합**: 파싱 → 중복 통합 (±3라인) → severity 정렬
+5. **결과 통합**: 파싱 → 중복 통합 (±3라인) → severity 정렬
 
 ## 도구 사용 규칙
 

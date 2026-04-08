@@ -1,0 +1,9 @@
+{
+  "name": "roto-pr-release",
+  "version": "1.1.0",
+  "description": "PR 자동 생성 및 릴리즈 노트 생성",
+  "author": {
+    "name": "roto"
+  },
+  "license": "MIT"
+}
